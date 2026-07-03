@@ -1,0 +1,519 @@
+<title>🏝️ 新居大島 夏旅しおり 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ocean:#1B4E6B;
+  --sky:#4BAED4;
+  --wave:#8DC8D8;
+  --sand:#EDD9A3;
+  --seafoam:#C8E8E0;
+  --paper:#F8F4EC;
+  --coral:#E07055;
+  --ink:#1C2B36;
+  --muted:#5A7A8A;
+  --card:#FFFFFF;
+  --shadow:rgba(27,78,107,0.1);
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Meiryo",sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+.hero{
+  background:linear-gradient(160deg,var(--ocean) 0%,#2B86B4 60%,var(--sky) 100%);
+  padding:52px 24px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;
+  width:180px;height:180px;
+  background:rgba(255,255,255,0.04);
+  border-radius:50%;
+}
+.hero-eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--wave);margin-bottom:14px;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+.hero-title{font-size:32px;font-weight:900;color:#fff;line-height:1.25;text-wrap:balance;margin-bottom:10px}
+.hero-date{font-size:13px;color:rgba(255,255,255,.78);margin-bottom:28px;letter-spacing:.04em}
+.hero-members{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:36px}
+.member-chip{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 13px;font-size:13px;font-weight:600}
+.hero-wave{display:block;width:100%;margin-bottom:-2px}
+
+.main{max-width:480px;margin:0 auto;padding:4px 16px 56px}
+.section{margin-top:30px}
+
+.section-label{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-bottom:12px;display:flex;align-items:center;gap:8px;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+.section-label::after{content:'';flex:1;height:1px;background:var(--wave);opacity:.35}
+
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 2px 14px var(--shadow);margin-bottom:10px}
+.card-title{font-size:13px;font-weight:700;color:var(--ocean);margin-bottom:8px;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+
+.day-header{background:linear-gradient(100deg,var(--ocean) 0%,#2B7296 100%);border-radius:14px;padding:16px 18px;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:14px}
+.day-number{font-size:42px;font-weight:900;line-height:1;opacity:.9}
+.day-date{font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.06em;margin-bottom:3px}
+.day-theme{font-size:15px;font-weight:700}
+
+.timeline{position:relative;padding-left:22px}
+.timeline::before{content:'';position:absolute;left:6px;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,var(--sky),var(--seafoam));border-radius:1px}
+.timeline-item{position:relative;padding-bottom:20px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-22px;top:6px;width:14px;height:14px;background:var(--sky);border-radius:50%;border:2.5px solid var(--card);box-shadow:0 0 0 2px var(--sky)}
+.timeline-dot.hot{background:var(--coral);box-shadow:0 0 0 2px var(--coral)}
+.timeline-time{font-size:12px;font-weight:700;color:var(--sky);letter-spacing:.04em;font-variant-numeric:tabular-nums;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+.timeline-text{font-size:14px;color:var(--ink);line-height:1.5}
+.timeline-sub{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.6}
+
+.ferry-card{background:linear-gradient(130deg,var(--ocean) 0%,#3590B8 100%);border-radius:14px;padding:18px;color:#fff;margin-bottom:10px}
+.ferry-eye{font-size:10px;letter-spacing:.15em;opacity:.65;text-transform:uppercase;margin-bottom:10px}
+.ferry-route{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;margin-bottom:8px}
+.ferry-dash{flex:1;height:1px;background:rgba(255,255,255,.35);position:relative}
+.ferry-dash::after{content:'▶';position:absolute;right:-3px;top:-9px;font-size:9px;color:rgba(255,255,255,.5)}
+.ferry-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.ferry-box{background:rgba(255,255,255,.12);border-radius:8px;padding:10px}
+.ferry-box-label{font-size:10px;opacity:.7;margin-bottom:4px}
+.ferry-box-time{font-size:17px;font-weight:800;font-variant-numeric:tabular-nums}
+.ferry-box-sub{font-size:11px;opacity:.75}
+
+.callout{background:#FFF0ED;border-left:3px solid var(--coral);border-radius:0 10px 10px 0;padding:12px 14px;font-size:13px;line-height:1.7;margin-bottom:10px;color:var(--ink)}
+.callout strong{color:var(--coral)}
+.info-box{background:var(--seafoam);border-radius:10px;padding:14px 16px;font-size:13px;color:var(--ocean);margin-bottom:10px;line-height:1.7}
+.info-box strong{font-weight:700}
+
+.car-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.car-card{background:var(--card);border-radius:12px;padding:14px 16px;box-shadow:0 2px 10px var(--shadow)}
+.car-label{font-size:11px;font-weight:700;color:var(--coral);letter-spacing:.06em;margin-bottom:7px;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+.car-names{font-size:13px;color:var(--ink);line-height:1.8}
+
+/* ── Checklist ── */
+.checklist-header{background:var(--seafoam);border-radius:10px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.progress-wrap{flex:1;background:rgba(27,78,107,.15);border-radius:4px;height:7px;overflow:hidden}
+.progress-fill{height:100%;background:var(--sky);border-radius:4px;transition:width .3s ease}
+.progress-count{font-size:12px;font-weight:700;color:var(--ocean);white-space:nowrap;font-variant-numeric:tabular-nums;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+
+.check-group{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 14px var(--shadow);margin-bottom:10px}
+.check-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:12px 18px 6px;font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif;background:rgba(200,232,224,.25)}
+
+.check-item{
+  display:flex;align-items:center;gap:10px;
+  padding:11px 14px 11px 18px;
+  border-bottom:1px solid rgba(27,78,107,.06);
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:background .12s;
+}
+.check-item:last-child{border-bottom:none}
+.check-item:active{background:rgba(200,232,224,.3)}
+
+.check-item input[type=checkbox]{
+  appearance:none;-webkit-appearance:none;
+  width:22px;height:22px;min-width:22px;
+  border:2px solid var(--wave);border-radius:7px;
+  cursor:pointer;position:relative;
+  transition:all .15s;flex-shrink:0;
+  pointer-events:none;
+}
+.check-item input[type=checkbox]:checked{background:var(--sky);border-color:var(--sky)}
+.check-item input[type=checkbox]:checked::after{
+  content:'';position:absolute;
+  left:5px;top:2px;width:8px;height:12px;
+  border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;
+  transform:rotate(45deg);
+}
+.check-label{font-size:14px;color:var(--ink);flex:1;line-height:1.4;transition:color .15s;pointer-events:none}
+.check-note{font-size:10px;color:var(--coral);font-weight:700;white-space:nowrap;pointer-events:none}
+.check-item.done .check-label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--wave)}
+
+/* ── Assignee select ── */
+.check-select{
+  -webkit-appearance:none;appearance:none;
+  background-color:var(--paper);
+  border:1.5px solid var(--wave);
+  border-radius:18px;
+  padding:5px 22px 5px 9px;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+  min-width:62px;
+  max-width:72px;
+  font-family:"Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238DC8D8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 7px center;
+  transition:all .15s;
+  flex-shrink:0;
+}
+.check-select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 2px rgba(75,174,212,.2)}
+.check-select.assigned{
+  background-color:var(--seafoam);
+  border-color:var(--sky);
+  color:var(--ocean);
+  font-weight:700;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%231B4E6B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.contact-row{display:flex;justify-content:space-between;align-items:center;padding:11px 18px;border-bottom:1px solid rgba(27,78,107,.07);font-size:14px}
+.contact-row:last-child{border-bottom:none}
+.contact-row a{color:var(--sky);font-weight:700;font-size:13px;text-decoration:none}
+
+.footer{text-align:center;padding:28px 16px 40px;font-size:13px;color:var(--muted)}
+
+#pw-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:9999;
+display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:sans-serif;}
+#pw-overlay input{padding:10px 16px;font-size:16px;border:1px solid #ccc;border-radius:6px;margin:12px 0;width:200px;}
+#pw-overlay button{padding:10px 24px;font-size:16px;background:#4a7;color:#fff;border:none;border-radius:6px;cursor:pointer;}
+#pw-overlay .err{color:#c33;font-size:14px;margin-top:8px;min-height:20px;}
+</style>
+
+<div id="pw-overlay">
+  <p style="font-size:18px;margin-bottom:4px;">🏝 新居大島 夏旅しおり</p>
+  <p style="color:#888;font-size:14px;margin-bottom:16px;">閲覧パスワードを入力してください</p>
+  <input type="password" id="pw-input" placeholder="パスワード" onkeydown="if(event.key==='Enter')checkPw()">
+  <button onclick="checkPw()">開く</button>
+  <p class="err" id="pw-err"></p>
+</div>
+<script>
+function checkPw(){
+  if(document.getElementById('pw-input').value==='oshima'){
+    document.getElementById('pw-overlay').style.display='none';
+  } else {
+    document.getElementById('pw-err').textContent='パスワードが違います';
+  }
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.getElementById('pw-input').focus();
+});
+</script>
+
+<div class="hero">
+  <div class="hero-eyebrow">Summer Trip 2026 · Ehime, Japan</div>
+  <h1 class="hero-title">🏝️ 新居大島<br>夏旅しおり</h1>
+  <div class="hero-date">2026年7月25日（土）〜 26日（日）</div>
+  <div class="hero-members">
+    <span class="member-chip">服部</span>
+    <span class="member-chip">横野</span>
+    <span class="member-chip">髙木</span>
+    <span class="member-chip">惣川</span>
+    <span class="member-chip">有川</span>
+    <span class="member-chip">河上</span>
+    <span class="member-chip">大窪</span>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 480 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,28 C60,44 120,14 200,30 C280,46 360,12 480,26 L480,52 L0,52 Z" fill="#F8F4EC"/>
+  </svg>
+</div>
+
+<div class="main">
+
+  <div class="section">
+    <div class="section-label">🚗 集合・移動</div>
+    <div class="info-box">
+      ✈️ <strong>服部・横野</strong>：当日朝一の便で松山空港へ<br>
+      🌙 <strong>髙木</strong>：前日（7/24）松山入り。JR松山駅近ホテルに前泊<br>
+      🚗 <strong>惣川</strong>：有川・髙木をピックして松山空港へ<br>
+      🚙 <strong>河上</strong>：大窪をピックして松山空港へ
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">📅 スケジュール</div>
+    <div class="day-header">
+      <div class="day-number">1</div>
+      <div>
+        <div class="day-date">JULY 25 · SATURDAY</div>
+        <div class="day-theme">✈️ 集合 → 🚢 島へ → 🏖️ 遊ぶ</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-text">✈️ 松山空港で全員集合</div>
+          <div class="timeline-sub">服部・横野の到着便に合わせて集合</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">11:30</div>
+          <div class="timeline-text">🍜 新居浜着・ランチ</div>
+          <div class="timeline-sub">新居浜市内でお昼ごはん</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot hot"></div>
+          <div class="timeline-time">13:30</div>
+          <div class="timeline-text">🚢 黒島港発 フェリー乗船</div>
+          <div class="timeline-sub">¥60/人（往復¥120）／往復券は黒島港でのみ購入可！</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">13:45</div>
+          <div class="timeline-text">🏝️ 大島港 到着（所要約15分）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">13:45〜15:00</div>
+          <div class="timeline-text">🏊 海で遊ぶ</div>
+          <div class="timeline-sub">東側〜南側の海岸が遠浅でおすすめ。瀬戸内海の透明度を満喫！</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot hot"></div>
+          <div class="timeline-time">15:00</div>
+          <div class="timeline-text">🏠 チェックイン</div>
+          <div class="timeline-sub">BBQ・焚き火・釣りができる宿</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">15:00〜</div>
+          <div class="timeline-text">🎣 釣り &nbsp;/&nbsp; 🍖 BBQ &nbsp;/&nbsp; 🍺 飲む &nbsp;/&nbsp; 🔥 焚き火 &nbsp;/&nbsp; 🎆 花火</div>
+          <div class="timeline-sub">ゆるっと楽しむ！</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-header" style="margin-top:20px">
+      <div class="day-number">2</div>
+      <div>
+        <div class="day-date">JULY 26 · SUNDAY</div>
+        <div class="day-theme">🛖 チェックアウト → 🚢 新居浜へ</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-text">🧹 チェックアウト</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot hot"></div>
+          <div class="timeline-time">10:15</div>
+          <div class="timeline-text">🚢 大島港発 フェリー</div>
+          <div class="timeline-sub">大島 10:15発 → 黒島港 10:30着</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">10:30〜</div>
+          <div class="timeline-text">🚗 新居浜 → 松山方面へ（約1時間）</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">11:30頃</div>
+          <div class="timeline-text">✈️ 松山空港 / 🍊 市内観光</div>
+          <div class="timeline-sub">帰りの便の時間次第で市内を散策♪</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">🚢 フェリー情報</div>
+    <div class="ferry-card">
+      <div class="ferry-eye">新居浜市営渡海船</div>
+      <div class="ferry-route">
+        <span>黒島港</span>
+        <div class="ferry-dash"></div>
+        <span>大島港</span>
+      </div>
+      <div style="font-size:12px;opacity:.75">所要約15分 ／ 大人 片道 ¥60 · 往復 ¥120</div>
+      <div class="ferry-grid">
+        <div class="ferry-box">
+          <div class="ferry-box-label">🛳 行き（7/25）</div>
+          <div class="ferry-box-time">13:30 発</div>
+          <div class="ferry-box-sub">黒島港 → 大島 13:45着</div>
+        </div>
+        <div class="ferry-box">
+          <div class="ferry-box-label">🚢 帰り（7/26）</div>
+          <div class="ferry-box-time">10:15 発</div>
+          <div class="ferry-box-sub">大島 → 黒島港 10:30着</div>
+        </div>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>⚠️ 要注意</strong>：往復券は<strong>黒島港でのみ</strong>購入可能！乗船前に忘れずに買って。<br>
+      黒島港へは JR多喜浜駅からバスで約10分（¥250）
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">🎣 釣り情報</div>
+    <div class="card">
+      <div class="card-title">釣り竿について</div>
+      <div style="font-size:13px;line-height:1.7">
+        宿のテーマが「<strong>釣る・焼く・癒す</strong>」なので備わっている可能性大！<br>
+        📌 <strong>事前にホストへ確認推奨</strong>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7">
+        万が一ない場合は新居浜市内の釣具店で：<br>
+        • トリトン新居浜店 <a href="tel:0897339848" style="color:var(--sky)">0897-33-9848</a><br>
+        • タックルベリー新居浜店 <a href="tel:0897433990" style="color:var(--sky)">0897-43-3990</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:0">
+    <div class="section-label">🏊 海水浴スポット</div>
+    <div class="card">
+      <div class="card-title">大島の海岸</div>
+      <div style="font-size:13px;line-height:1.7">
+        東側〜南側の海岸が遠浅で穏やか。砂浜が約1km続く。<br>
+        瀬戸内海の透明度が高くシュノーケルにも◎<br>
+        <span style="font-size:12px;color:var(--muted)">※ライフセーバー常駐なし。泳ぎすぎに注意</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">🎒 持ち物チェックリスト</div>
+    <div class="checklist-header">
+      <span style="font-size:22px">🎒</span>
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-count" id="progressCount">0 / 0</div>
+    </div>
+
+    <div class="check-group" id="listMarineOutdoor">
+      <div class="check-cat">🏖️ マリン・アウトドア</div>
+    </div>
+    <div class="check-group" id="listClothes">
+      <div class="check-cat">👕 衣類・身の回り</div>
+    </div>
+    <div class="check-group" id="listAmenity">
+      <div class="check-cat">🚿 アメニティ <span class="check-note" style="font-size:10px;font-weight:700">※宿に要確認</span></div>
+    </div>
+    <div class="check-group" id="listFishing">
+      <div class="check-cat">🎣 釣り <span class="check-note" style="font-size:10px;font-weight:700">※宿に要確認</span></div>
+    </div>
+    <div class="check-group" id="listOther">
+      <div class="check-cat">📱 その他</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">📞 緊急連絡先</div>
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="contact-row"><span>大島交流センター</span><a href="tel:0897451006">0897-45-1006</a></div>
+      <div class="contact-row"><span>フェリー（交通観光課）</span><a href="tel:0897651261">0897-65-1261</a></div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">🌊 楽しい旅になりますように！ 🏝️</div>
+
+<script>
+const KEY = 'oshima2026v2';
+const MEMBERS = ['全員','服部','横野','髙木','惣川','有川','河上','大窪'];
+
+const ITEMS = [
+  { id:'c1',  group:'listMarineOutdoor', label:'水着' },
+  { id:'c2',  group:'listMarineOutdoor', label:'ビーチサンダル' },
+  { id:'c3',  group:'listMarineOutdoor', label:'ラッシュガード' },
+  { id:'c4',  group:'listMarineOutdoor', label:'日焼け止め' },
+  { id:'c5',  group:'listMarineOutdoor', label:'浮き輪（＋空気入れ）' },
+  { id:'c6',  group:'listMarineOutdoor', label:'ビーチバレーボール' },
+  { id:'c7',  group:'listMarineOutdoor', label:'水中眼鏡' },
+  { id:'c8',  group:'listMarineOutdoor', label:'花火 🎆' },
+  { id:'c9',  group:'listClothes', label:'着替え（2日分）' },
+  { id:'c10', group:'listClothes', label:'パジャマ・部屋着' },
+  { id:'c11', group:'listClothes', label:'サングラス・帽子' },
+  { id:'c12', group:'listClothes', label:'レインウェア（念のため）' },
+  { id:'c13', group:'listAmenity', label:'タオル（ビーチタオル含む）', note:'要確認' },
+  { id:'c14', group:'listAmenity', label:'歯ブラシ・歯磨き粉', note:'要確認' },
+  { id:'c15', group:'listAmenity', label:'シャンプー・コンディショナー', note:'要確認' },
+  { id:'c16', group:'listAmenity', label:'ボディソープ', note:'要確認' },
+  { id:'c17', group:'listFishing', label:'釣り竿・仕掛け', note:'要確認' },
+  { id:'c18', group:'listFishing', label:'クーラーボックス・氷' },
+  { id:'c19', group:'listOther', label:'現金（フェリー代・食費）' },
+  { id:'c20', group:'listOther', label:'充電器・モバイルバッテリー' },
+  { id:'c21', group:'listOther', label:'虫除けスプレー 🦟' },
+  { id:'c22', group:'listOther', label:'酔い止め（フェリー用）' },
+  { id:'c23', group:'listOther', label:'救急セット・常備薬' },
+  { id:'c24', group:'listOther', label:'ゴミ袋' },
+];
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; }
+}
+function store(id, checked, who) {
+  const d = load();
+  d[id] = { checked, who: who || '' };
+  localStorage.setItem(KEY, JSON.stringify(d));
+}
+function refresh() {
+  const all = document.querySelectorAll('.check-item input[type=checkbox]');
+  const done = document.querySelectorAll('.check-item input[type=checkbox]:checked');
+  const pct = all.length ? (done.length / all.length * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = done.length + ' / ' + all.length;
+}
+
+const memberOptions = MEMBERS.map(m => `<option value="${m}">${m}</option>`).join('');
+const saved = load();
+
+ITEMS.forEach(item => {
+  const s = saved[item.id] || {};
+  const checked = s.checked || false;
+  const who = s.who || '';
+
+  const el = document.createElement('div');
+  el.className = 'check-item' + (checked ? ' done' : '');
+  el.dataset.id = item.id;
+
+  const noteHtml = item.note
+    ? `<span class="check-note">${item.note}</span>`
+    : '';
+
+  el.innerHTML = `
+    <input type="checkbox" data-id="${item.id}"${checked ? ' checked' : ''}>
+    <span class="check-label">${item.label}</span>
+    ${noteHtml}
+    <select class="check-select${who ? ' assigned' : ''}" data-id="${item.id}">
+      <option value="">担当</option>
+      ${memberOptions}
+    </select>
+  `;
+
+  if (who) el.querySelector('select').value = who;
+
+  const cb = el.querySelector('input');
+  const sel = el.querySelector('select');
+
+  // Clicking anywhere on the row except the select toggles the checkbox
+  el.addEventListener('click', (e) => {
+    if (e.target === sel || e.target.tagName === 'OPTION') return;
+    if (e.target !== cb) {
+      cb.checked = !cb.checked;
+      el.classList.toggle('done', cb.checked);
+      store(item.id, cb.checked, sel.value);
+      refresh();
+    }
+  });
+
+  // Native checkbox click (direct tap on checkbox itself)
+  cb.addEventListener('change', () => {
+    el.classList.toggle('done', cb.checked);
+    store(item.id, cb.checked, sel.value);
+    refresh();
+  });
+
+  // Select change
+  sel.addEventListener('change', (e) => {
+    e.stopPropagation();
+    sel.classList.toggle('assigned', sel.value !== '');
+    store(item.id, cb.checked, sel.value);
+  });
+  sel.addEventListener('click', (e) => e.stopPropagation());
+
+  document.getElementById(item.group).appendChild(el);
+});
+
+refresh();
+</script>
